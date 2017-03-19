@@ -1,0 +1,32 @@
+@import '../styles/style';
+
+$font-family: 'Open Sans';
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-family;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  cursor: default;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+button, input {
+  font-family: $font-family;
+}
+
