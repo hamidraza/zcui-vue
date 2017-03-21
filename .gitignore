@@ -1,7 +1,7 @@
 .DS_Store
 node_modules/
 npm-debug.log
-public/bundle
+public/build
 public/index.html
 temp/
 .env
