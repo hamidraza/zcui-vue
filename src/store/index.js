@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
+import modules from './modules';
+
 Vue.use(Vuex);
 
 export class AppStoreState {
@@ -17,7 +19,6 @@ export class AppStoreState {
 
 export default new Vuex.Store({
   state: new AppStoreState,
-  modules: {
-  }
+  modules
 });
 

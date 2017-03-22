@@ -67,7 +67,8 @@ const webpackConfig = {
 **/
 if(ENV == 'development') {
   webpackConfig.output.sourceMapFilename = '[file].map';
-  webpackConfig.output.publicPath = process.env.PUBLIC_PATH || '/';
+  //webpackConfig.output.publicPath = process.env.PUBLIC_PATH || '/';
+  webpackConfig.output.publicPath = '/';
   webpackConfig.module.rules.push(...[{
     test: /\.(scss|css)$/,
     exclude: /node_modules/,
@@ -76,6 +77,7 @@ if(ENV == 'development') {
   webpackConfig.devServer = {
     host: '0.0.0.0',
     port: 9393,
+    //https: true,
     inline: true,
     hot: true,
     contentBase: 'public',
@@ -105,10 +107,6 @@ if(ENV == 'production') {
   webpackConfig.plugins.push(...[
     new ExtractTextPlugin('[name]-[hash].bundle.css')
   ])
-
-  //console.log('Hello world', webpackConfig);
-  //throw new Error('error');
-
 }
 
 

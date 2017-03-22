@@ -1,5 +1,12 @@
 <template>
-  <h1>APP</h1>
+  <center>
+    <h1>zcui App</h1>
+    <div>
+      <button @click.prevent="$store.state.increment">+</button>
+      <strong>{{$store.state.count}}</strong>
+      <button @click.prevent="$store.state.decrement">-</button>
+    </div>
+  </center>
 </template>
 
 <script>
