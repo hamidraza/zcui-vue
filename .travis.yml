@@ -4,5 +4,7 @@ node_js:
 env:
   - NODE_ENV=production
   - BABEL_ENV=production
+before_install:
+  - 'npm install -g npm@latest'
 install:
   npm run prod
