@@ -1,9 +1,6 @@
 language: node_js
 node_js:
   - "6"
-env:
-  - NODE_ENV=production
-  - BABEL_ENV=production
 script:
-  - yarn
+  - yarn install
   - npm run prod
