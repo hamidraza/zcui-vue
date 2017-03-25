@@ -4,8 +4,7 @@ node_js:
 env:
   - NODE_ENV=production
   - BABEL_ENV=production
-before_install:
-  - 'npm install -g npm@latest'
-  - 'npm install'
 install:
-  npm run prod
+  - yarn install
+script:
+  - npm run prod
