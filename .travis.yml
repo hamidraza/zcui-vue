@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - "6"
+env:
+  - NODE_ENV=production
+  - BABEL_ENV=production
+install:
+  npm run prod
