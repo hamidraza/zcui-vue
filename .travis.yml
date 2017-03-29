@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "6"
-cache: yarn
-script:
-  - npm run test
+  - "7.7"
+cache:
+  directories:
+    - node_modules
