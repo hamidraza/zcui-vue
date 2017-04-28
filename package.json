@@ -49,6 +49,7 @@
     "css-loader": "^0.27.3",
     "dotenv": "^4.0.0",
     "eslint": "^3.18.0",
+    "eslint-plugin-flowtype": "^2.32.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
     "flow-bin": "^0.42.0",
