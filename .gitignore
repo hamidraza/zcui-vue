@@ -5,4 +5,4 @@ public/build
 public/index.html
 temp/
 .env
-
+coverage/
