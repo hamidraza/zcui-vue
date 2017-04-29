@@ -4,6 +4,7 @@
 [![Travis-ci](https://img.shields.io/travis/hamidraza/zcui-vue.svg?style=flat-square)](https://travis-ci.org/hamidraza/zcui-vue/)
 [![zcui-cli](https://img.shields.io/badge/cli-zcui-blue.svg?style=flat-square)](https://github.com/ZoomCar/zcui)
 [![CodeClimate](https://img.shields.io/codeclimate/github/hamidraza/zcui-vue.svg?style=flat-square)](https://codeclimate.com/github/hamidraza/zcui-vue)
+[![Greenkeeper badge](https://badges.greenkeeper.io/hamidraza/zcui-vue.svg)](https://greenkeeper.io/)
 ---
 
 
