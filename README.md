@@ -6,6 +6,8 @@
 [![CodeClimate](https://img.shields.io/codeclimate/github/hamidraza/zcui-vue.svg?style=flat-square)](https://codeclimate.com/github/hamidraza/zcui-vue)
 ---
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hamidraza/zcui-vue.svg)](https://greenkeeper.io/)
+
 
 #### Installation
 
