@@ -1,9 +1,27 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.0
+version: v1.12.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:shelljs:20140723':
     - eslint > shelljs:
         reason: None given
         expires: '2017-05-29T04:42:21.752Z'
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hoek:20180212':
+    - node-sass > request > hawk > hoek:
+        patched: '2018-06-23T09:06:06.431Z'
+    - node-sass > request > hawk > boom > hoek:
+        patched: '2018-06-23T09:06:06.431Z'
+    - node-sass > request > hawk > sntp > hoek:
+        patched: '2018-06-23T09:06:06.431Z'
+    - node-sass > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-06-23T09:06:06.431Z'
+    - node-sass > node-gyp > request > hawk > hoek:
+        patched: '2018-06-23T09:06:06.431Z'
+    - node-sass > node-gyp > request > hawk > boom > hoek:
+        patched: '2018-06-23T09:06:06.431Z'
+    - node-sass > node-gyp > request > hawk > sntp > hoek:
+        patched: '2018-06-23T09:06:06.431Z'
+    - node-sass > node-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-06-23T09:06:06.431Z'

@@ -21,7 +21,8 @@
     "prepush": "npm run test",
     "commitmsg": "validate-commit-msg",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "npm run snyk-protect",
+    "prepare": "npm run snyk-protect"
   },
   "pre-commit": [
     "flow",
@@ -62,7 +63,7 @@
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
     "sass-loader": "^6.0.3",
-    "snyk": "^1.36.2",
+    "snyk": "^1.83.0",
     "style-loader": "^0.19.1",
     "validate-commit-msg": "^2.12.1",
     "vue": "^2.3.0",
