@@ -21,7 +21,8 @@
     "prepush": "npm run test",
     "commitmsg": "validate-commit-msg",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "npm run snyk-protect",
+    "prepare": "npm run snyk-protect"
   },
   "pre-commit": [
     "flow",
@@ -58,11 +59,11 @@
     "flow-bin": "^0.63.1",
     "html-webpack-plugin": "^2.28.0",
     "husky": "^0.14.0",
-    "jest": "^22.0.0",
+    "jest": "^23.0.0",
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
     "sass-loader": "^6.0.3",
-    "snyk": "^1.36.2",
+    "snyk": "^1.88.0",
     "style-loader": "^0.19.1",
     "validate-commit-msg": "^2.12.1",
     "vue": "^2.3.0",
