@@ -63,7 +63,7 @@
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
     "sass-loader": "^7.0.3",
-    "snyk": "^1.88.0",
+    "snyk": "^1.89.0",
     "style-loader": "^0.21.0",
     "validate-commit-msg": "^2.12.1",
     "vue": "^2.3.0",
