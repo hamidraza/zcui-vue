@@ -8,20 +8,6 @@ ignore:
         expires: '2017-05-29T04:42:21.752Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
-  'npm:hoek:20180212':
-    - node-sass > request > hawk > hoek:
-        patched: '2018-06-23T09:06:06.431Z'
-    - node-sass > request > hawk > boom > hoek:
-        patched: '2018-06-23T09:06:06.431Z'
-    - node-sass > request > hawk > sntp > hoek:
-        patched: '2018-06-23T09:06:06.431Z'
-    - node-sass > request > hawk > cryptiles > boom > hoek:
-        patched: '2018-06-23T09:06:06.431Z'
-    - node-sass > node-gyp > request > hawk > hoek:
-        patched: '2018-06-23T09:06:06.431Z'
-    - node-sass > node-gyp > request > hawk > boom > hoek:
-        patched: '2018-06-23T09:06:06.431Z'
-    - node-sass > node-gyp > request > hawk > sntp > hoek:
-        patched: '2018-06-23T09:06:06.431Z'
-    - node-sass > node-gyp > request > hawk > cryptiles > boom > hoek:
-        patched: '2018-06-23T09:06:06.431Z'
+  'npm:tunnel-agent:20170305':
+    - node-sass > request > tunnel-agent:
+        patched: '2018-06-30T08:57:01.283Z'
