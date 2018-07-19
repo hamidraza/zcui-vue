@@ -61,7 +61,7 @@
     "jest": "^22.0.0",
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
-    "sass-loader": "^6.0.3",
+    "sass-loader": "^7.0.3",
     "snyk": "^1.36.2",
     "style-loader": "^0.21.0",
     "validate-commit-msg": "^2.12.1",
