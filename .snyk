@@ -11,3 +11,12 @@ patch:
   'npm:tunnel-agent:20170305':
     - node-sass > request > tunnel-agent:
         patched: '2018-06-30T08:57:01.283Z'
+  'npm:hoek:20180212':
+    - node-sass > node-gyp > request > hawk > hoek:
+        patched: '2018-07-19T16:18:02.192Z'
+    - node-sass > node-gyp > request > hawk > boom > hoek:
+        patched: '2018-07-19T16:18:02.192Z'
+    - node-sass > node-gyp > request > hawk > sntp > hoek:
+        patched: '2018-07-19T16:18:02.192Z'
+    - node-sass > node-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-07-19T16:18:02.192Z'
