@@ -1,10 +1,10 @@
 <template>
   <center>
-    <h1>zcui App</h1>
+    <h1>ZcUI App!</h1>
     <div>
-      <button @click.prevent="$store.state.increment">+</button>
-      <strong>{{$store.state.count}}</strong>
-      <button @click.prevent="$store.state.decrement">-</button>
+      <button @click.prevent="$store.dispatch('App/increment')">+</button>
+      <strong class="count-value">{{$store.state.App.count}}</strong>
+      <button @click.prevent="$store.dispatch('App/decrement')">-</button>
     </div>
   </center>
 </template>

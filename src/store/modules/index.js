@@ -1,4 +1,6 @@
+import App from './app';
+
 export default {
-  /* No modules to export */
+  App
 };
 
