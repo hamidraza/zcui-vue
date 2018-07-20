@@ -2,11 +2,15 @@ require('dotenv').config();
 
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+
 const ENV = process.env.NODE_ENV;
+const isProd = ENV == 'production';
 
 const webpackConfig = {
+  mode: isProd ? 'production' : 'development',
   entry: {
     app    : '~/main.js',
     //lib    : [],
@@ -22,28 +26,35 @@ const webpackConfig = {
   module: {
     rules: [{
       test: /\.js$/,
-      exclude: [/node_modules/],
+      exclude: [/node_modules(?!\/\@zoomcarindia)/],
       use: 'babel-loader'
     }, {
       test: /\.vue$/,
+      exclude: [/node_modules(?!\/\@zoomcarindia)/],
       use: 'vue-loader'
     }, {
+      test: /\.(sa|sc|c)ss$/,
+      exclude: [/node_modules(?!\/\@zoomcarindia)/],
+      use: [
+        isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+        'css-loader?sourceMap',
+        'postcss-loader?sourceMap',
+        'sass-loader?sourceMap'
+      ],
+    }, {
       test: /\.(png|jpg|jpeg|gif|woff|woff2|eot|ttf|svg)$/,
+      exclude: [/node_modules(?!\/\@zoomcarindia)/],
       use: 'file-loader'
     }]
   },
   resolve: {
     alias:{
       '~': path.resolve(__dirname, 'src'),
-      'vue$': 'vue/dist/vue.runtime.min.js',
-      'vuex$': 'vuex/dist/vuex.min.js'
-    }
+      'vue$': `vue/dist/vue.runtime${isProd?'.min':''}.js`,
+      'vuex$': `vuex/dist/vuex${isProd?'.min':''}.js`,
+    },
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      names: ['app', 'common', 'vendor', 'lib'],
-      filename: '[name]-[hash].bundle.js',
-    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
@@ -51,29 +62,29 @@ const webpackConfig = {
     }),
     new HtmlWebpackPlugin({
       template       : './src/index.ejs',
-      filename       : ENV == 'production' ? '../index.html': 'index.html',
+      filename       : isProd ? '../index.html': 'index.html',
       env            : process.env,
       chunksSortMode(a, b) {
         const order = ['app', 'common', 'vendor', 'lib'];
         return order.indexOf(b.names[0]) - order.indexOf(a.names[0]);
       }
-    })
+    }),
+    new VueLoaderPlugin(),
+    new MiniCssExtractPlugin({
+      filename: isProd ? '[name].[contenthash].css' : '[name].css',
+      chunkFilename: isProd ? '[id].[contenthash].css' : '[id].css',
+    }),
   ],
-  devtool: (ENV === 'development') ? 'source-map' : false
+  devtool: isProd ? 'source-map' : false,
 };
 
 /**
 // WP Config for development environment
 **/
-if(ENV == 'development') {
+if(!isProd) {
   webpackConfig.output.sourceMapFilename = '[file].map';
   //webpackConfig.output.publicPath = process.env.PUBLIC_PATH || '/';
   webpackConfig.output.publicPath = '/';
-  webpackConfig.module.rules.push(...[{
-    test: /\.(scss|css)$/,
-    exclude: /node_modules/,
-    use: ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap'],
-  }])
   webpackConfig.devServer = {
     host: '0.0.0.0',
     port: 9393,
@@ -94,7 +105,7 @@ if(ENV == 'development') {
 /**
 // WP Config for production environment
 **/
-if(ENV == 'production') {
+if(isProd) {
   webpackConfig.output.publicPath = '/build/';
   webpackConfig.module.rules.push(...[{
     test: /\.scss$/,
