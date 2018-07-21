@@ -6,7 +6,7 @@ module.exports = {
     layouts: 'src/layouts',
     store: 'src/store',
     helpers: 'src/helpers',
-    style: 'src/styles',
+    styles: 'src/styles',
   },
 };
 
