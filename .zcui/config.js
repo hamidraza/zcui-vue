@@ -5,6 +5,7 @@ module.exports = {
     pages: 'src/pages',
     layouts: 'src/layouts',
     store: 'src/store',
+    helpers: 'src/helpers',
     style: 'src/styles',
   },
 };
