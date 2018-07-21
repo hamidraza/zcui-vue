@@ -86,8 +86,6 @@
   "engines": {
     "node": ">= 6.0.0"
   },
-  "zcui": {
-    "variant": "vue"
-  },
   "snyk": true
 }
+
