@@ -1,12 +1,12 @@
 module.exports = {
   variant: 'vue',
   path: {
-    components: 'src/components',
-    pages: 'src/pages',
-    layouts: 'src/layouts',
+    component: 'src/components',
+    page: 'src/pages',
+    layout: 'src/layouts',
     store: 'src/store',
-    helpers: 'src/helpers',
-    styles: 'src/styles',
+    helper: 'src/helpers',
+    style: 'src/styles',
   },
 };
 
