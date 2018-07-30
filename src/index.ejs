@@ -7,18 +7,6 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <title>ZCUI</title>
-
-  <% if (htmlWebpackPlugin.options.env.NODE_ENV == 'production') { %>
-    <link href="//cdn.materialdesignicons.com/1.7.22/css/materialdesignicons.min.css" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <script src="https://cdn.polyfill.io/v2/polyfill.js?features=default,fetch"></script>
-  <% } %>
-
-  <script>
-  navigator.serviceWorker && navigator.serviceWorker.register('/service-worker.js', { scope: './' })
-    .then(function(r) {})
-    .catch(function() {});
-  </script>
 </head>
 <body>
   <div id="app"></div>
