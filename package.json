@@ -70,7 +70,7 @@
     "postcss-loader": "^2.1.6",
     "sass-loader": "^7.0.3",
     "snyk": "^1.89.0",
-    "style-loader": "^0.21.0",
+    "style-loader": "^0.23.1",
     "validate-commit-msg": "^2.12.1",
     "vue": "^2.3.0",
     "vue-jest": "^2.6.0",
