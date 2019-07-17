@@ -44,7 +44,7 @@
   "author": "Hamid Raza <hamid.raza@zoomcar.com>",
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "^7.0.0-beta.54",
+    "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.0.0-beta.54",
     "@vue/test-utils": "^1.0.0-beta.20",
     "babel-core": "^7.0.0-0",
