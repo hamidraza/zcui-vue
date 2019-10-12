@@ -61,7 +61,7 @@
     "file-loader": "^1.1.6",
     "flow-bin": "^0.77.0",
     "html-webpack-plugin": "^3.2.0",
-    "husky": "^0.14.0",
+    "husky": "^3.0.9",
     "jest": "^23.0.0",
     "jest-serializer-vue": "^2.0.2",
     "mini-css-extract-plugin": "^0.4.1",
